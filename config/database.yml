@@ -1,0 +1,32 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
+  port: 3306
+
+default: &postgres
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *postgres
+  url: <%= ENV['DATABASE_DEVELOPMENT_URL'] %>
+test:
+  <<: *postgres
+  url: <%= ENV['DATABASE_TEST_URL'] %>
+production:
+  <<: *postgres
+  url: <%= ENV['DATABASE_URL'] %>
+
+secondbase:
+  development:
+    <<: *postgres
+    url: <%= ENV['SECOND_DATABASE_DEVELOPMENT_URL'] %>
+  test:
+    <<: *postgres
+    url: <%= ENV['SECOND_DATABASE_TEST_URL'] %>
+  production:
+    <<: *postgres
+    url: <%= ENV['SECOND_DATABASE_URL'] %>
