@@ -31,20 +31,6 @@ and as part of the DevOps project we must monitoring it with **New Relic** and *
 
 <br>
 
-### Exemple of how the  *Speech Api* actually work:
-
-
-First we create a *.wav* sound in this specific specs :
-|# Rate                         |Format         |Channel  |
-|-------------------------------|---------------|---------|
-|`16000Hz`                        |`16-bit`       |`1(Mono)`|
-
-We then enroll the *.wav* sound and extract them for modeling and then send to the database. Once enrolled we can use an other sample and let the **API** compare the 2 sounds together and then give a results based on the modeling from the first data we gave. The 2 major result are `Accepted (score > 0.5)` and `Rejected (score < 0.5)`.
-
-> **Pros:** The **Speech-To-Text** worked really well and the transcription doesnt differ a lot from the true result.
-> 
-> **Cons:** The **Speech API** from  **Azure** as some flaws where it wont recognize enrolled voice from conversation.
-
 ## Installation
 
 Clone or download the .zip for this project. 
@@ -68,14 +54,17 @@ Here are the commands that will have to be entered in your terminal when modific
 
 <br>
 
-### Testing 
-You don't need to be logged in, just click in SPEECH SERVICES menu tabe and choose service you desire to test.
+### Preview
 
-> Put the audio file on your local drive to test the *speaker transcribe*.
+### New Relic:
+
+![](gifs/new-relic-01.gif)
+
+
 
 <br>
 
-[Click here to download the audio samples](https://github.com/johnnybigoo/ML-Audio-Samples.git)
+
 
 <br>
 
