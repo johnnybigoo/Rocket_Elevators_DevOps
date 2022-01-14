@@ -21,7 +21,7 @@
 Rocket Elevators DevOps is one of the final project for the last 14th week.
 
 By this week we had to configurate and deploy our website in another server. Examples suggested were Digitalocean or Vultr. I have choose Heroku
-and as part of the DevOps project we must monitoring it with **New Relic** and **Google Analytics**
+and as part of the DevOps project we must monitoring it with **New Relic** and **Google Analytics** services.
 
 <br>
 
@@ -40,7 +40,7 @@ Here are the commands that will have to be entered in your terminal to start the
 - ruby -v (To check if a corresponding version need to be installed)
 - rails -v (To check if a corresponding version need to be installed)
 - bundle install (To install all the necessary Gems)
-- Create in the root `.env` file and add assign to variable `AZURE_KEY=` your Azure speech service key.
+- Create in the root `.env` file and add assign to variable `NEW_RELIC_KEY=` & `GOOGLE_ANALYTICS_KEY=`.
 - Check in the directory for config/database.yml and if necessary replace the database password by yours.
 - rails db:create
 - rails s
@@ -55,26 +55,19 @@ Here are the commands that will have to be entered in your terminal when modific
 <br>
 
 ### Preview
-
+<br><hr>
 ### New Relic:
+<br>
 
-![](gifs/new-relic-01.gif)
+<img src="gifs/new-relic-1.gif" width="1050" height="550"/>
 
-
+<br><hr>
+### Google Analytics:
+<br>
+<img src="gifs/google-analytics-2.gif" width="1050" height="550"/>
 
 <br>
 
-
-
-<br>
-
-- `Enroll` : The *enroll* section is used to create your voice profile inside the Database.
-- `Upload` : The *Upload* section is used to test this audio clip against a voice profile.
-- `Verify` : With the *verify* section you can test your Newly enroll profil ( or an older one) against and audio clip and verify if your test match !
-
-<br>
-
-To access the database, use Dbeaver or MySQLWorkbench, which shows a history of data stored in the server. The fictitious and real data covers the last 3 years of activity from companies. Graphical representations and charts will also be available in the stats page of the website. 
 
 <br>
 
@@ -86,10 +79,6 @@ To access the database, use Dbeaver or MySQLWorkbench, which shows a history of 
 * [Bootstrap](https://getbootstrap.com)
 * [JQuery](https://jquery.com)
 * [Postgres V-10.18](https://www.postgresql.org/docs/10/release-10-18.html)
-* [Microsoft Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/)
 
 
 <br>
-
-
-
