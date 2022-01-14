@@ -1,8 +1,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="http://rocketelevators-jt.com/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png">
-    <img src="http://rocketelevators-jt.com/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png" alt="Logo" width="500" height="200">
+  <a href="https://rocket-elevators-devops.herokuapp.com/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png">
+    <img src="https://rocket-elevators-devops.herokuapp.com/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png" alt="Logo" width="500" height="200">
   </a>
 
   <h3 align="center">Rocket Elevators DevOps
@@ -18,14 +18,15 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Rocket Elevators DevOps is the 14th week project for the Odyssey 14 weeks program in CodeBoxx. 
+Rocket Elevators DevOps is one of the final project for the last 14th week.
 
-By this week we had to create a Machine learning API using the Azure Api **Speech**. We used our voice to simulate a conversation that happen inside an elevator and see how well it can detect our voice and if it was able to translate it to text. From the **Speech** Service offered by Azure we have used *Speech-to-Text* and *Speaker Recognition*.
+By this week we had to configurate and deploy our website in another server. Examples suggested were Digitalocean or Vultr. I have choose Heroku
+and as part of the DevOps project we must monitoring it with **New Relic** and **Google Analytics**
 
 <br>
 
 ### Website deployed:
-[https://rocket-elevators-ml.herokuapp.com/](https://rocket-elevators-ml.herokuapp.com/)
+[https://rocket-elevators-devops.herokuapp.com/](https://rocket-elevators-devops.herokuapp.com/)
 
 
 <br>
