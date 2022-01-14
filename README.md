@@ -5,11 +5,11 @@
     <img src="http://rocketelevators-jt.com/assets/_rocket/R2-3c6296bf2343b849b947f8ccfce0de61dd34ba7f9e2a23a53d0a743bc4604e3c.png" alt="Logo" width="500" height="200">
   </a>
 
-  <h3 align="center">Rocket Elevators Foundation
+  <h3 align="center">Rocket Elevators DevOps
 </h3>
   
   <p align="center">
-    Odyssey Program - Week 13 
+    Odyssey Program - Week 14 
   </p>
 </p>
 
@@ -18,7 +18,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Rocket Elevators Machine Learning is the 13th week project for the Odyssey 14 weeks program in CodeBoxx. 
+Rocket Elevators DevOps is the 14th week project for the Odyssey 14 weeks program in CodeBoxx. 
 
 By this week we had to create a Machine learning API using the Azure Api **Speech**. We used our voice to simulate a conversation that happen inside an elevator and see how well it can detect our voice and if it was able to translate it to text. From the **Speech** Service offered by Azure we have used *Speech-to-Text* and *Speaker Recognition*.
 
