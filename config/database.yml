@@ -17,8 +17,8 @@ test:
   <<: *default
   url: <%= ENV['DATABASE_TEST_URL'] %>
 production:
-  <<: *default
-  url: <%= ENV['CLEARDB_DATABASE_URL'] %>
+  <<: *postgres
+  url: <%= ENV['DATABASE_URL'] %>
 
 secondbase:
   development:
