@@ -20,9 +20,10 @@
 //= require jquery-ui
 
 //= require bootstrap-sprockets
-//= require bootstrap
 //= require owl.carousel
 //= require Chart.bundle
 //= require chartkick
 //= require_tree .
+//= stub "js/transcribe"
+//= stub "js/azure_speech"
 

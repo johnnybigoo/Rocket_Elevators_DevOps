@@ -56,17 +56,7 @@ jQuery(window).ready(function () {
 	_loadPopperBS4();
 
 	// Load Bootstrap JS
-	loadScript(plugin_path + 'bootstrap/js/bootstrap.min.js', function () {
 
-		// Load Material Design Js
-		if (jQuery("body").hasClass('enable-materialdesign')) {
-			loadScript(plugin_path + 'mdl/material.min.js');
-		}
-
-		// Init
-		Init(false);
-
-	});
 
 
 	/* --- */

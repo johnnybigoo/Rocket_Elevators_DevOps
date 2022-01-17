@@ -21,7 +21,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', <%= ENV['GOOGLE_ANALYTICS_KEY'] %>);
+      gtag('config', "<%= ENV['GOOGLE_ANALYTICS_KEY'] %>");
     </script>
   </head>
 
