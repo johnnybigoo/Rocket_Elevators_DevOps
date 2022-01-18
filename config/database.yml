@@ -18,9 +18,8 @@ test:
   url: <%= ENV['DATABASE_TEST_URL'] %>
 production:
   <<: *default
-  url: <%= ENV['JAWSDB_URL'] %>
-  <<: *postgres
   url: <%= ENV['DATABASE_URL'] %>
+
 
 secondbase:
   development:
