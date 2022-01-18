@@ -11,7 +11,7 @@ namespace :db do
         ActiveRecord::Base.establish_connection(url: ENV['DATABASE_URL'])
         row = ActiveRecord::Base.connection.execute('SELECT q.id, q.created_at ,q.compagnyName ,q.email ,q.numElevator 
                                                     FROM quotes q; ')
-        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_YELLOW_URL'])
+        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_RED_URL'])
         row.each do |val|
             query = "INSERT INTO public.fact_quotes (\"quoteId\", creation_date, \"compagnyName\", email, \"nbElevator\") VALUES(#{val[0]},'#{val[1]}', '#{val[2].gsub("'","''")}', '#{val[3]}', #{val[4]});"
             ActiveRecord::Base.connection.execute(query)
@@ -22,7 +22,7 @@ namespace :db do
         ActiveRecord::Base.establish_connection(url: ENV['DATABASE_URL'])
         row = ActiveRecord::Base.connection.execute('SELECT l.id , l.`date`,l.compagnyName,l.email,l.nameProject
                                                      FROM leads l ')
-        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_YELLOW_URL'])
+        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_RED_URL'])
         row.each do |val|
             query = "INSERT INTO public.fact_contacts (\"contactId\", creation_date, \"compagnyName\", \"email\", \"nameProject\") VALUES(#{val[0]},'#{val[1]}', '#{val[2].gsub("'","''")}', '#{val[3]}', '#{val[4].gsub("'","''")}');"
             ActiveRecord::Base.connection.execute(query)
@@ -37,7 +37,7 @@ namespace :db do
                                                    INNER JOIN batteries ba ON co.batteryId = ba.id 
                                                    INNER JOIN buildings b ON ba.buildingId = b.id
                                                    INNER JOIN addresses a ON b.addressId = a.id; ')
-        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_YELLOW_URL'])
+        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_RED_URL'])
         row.each do |val|
             query = "INSERT INTO public.fact_elevators (\"serialNumber\", \"dateCommissioning\", \"buildingId\", \"customerId\", city) VALUES('#{val[0]}','#{val[1]}', #{val[2]}, #{val[3]}, '#{val[4].gsub("'","''")}');"
             ActiveRecord::Base.connection.execute(query)
@@ -54,7 +54,7 @@ namespace :db do
                                                     INNER JOIN customers c ON b.customerId = c.id
                                                     INNER JOIN addresses a ON b.addressId = a.id
                                                     GROUP BY c.dateCreation,c.compagnyName,c.fullName ,c.email,a.city; ')
-        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_YELLOW_URL'])
+        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_RED_URL'])
         row.each do |val|
             query = "INSERT INTO public.dim_customers (creation_date, \"compagnyName\", \"fullNameContact\", email, \"nbElevator\",city) VALUES('#{val[0]}','#{val[1].gsub("'","''")}', '#{val[2].gsub("'","''")}', '#{val[3]}', #{val[4]}, '#{val[5].gsub("'","''")}');"
             ActiveRecord::Base.connection.execute(query)

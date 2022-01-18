@@ -8,7 +8,7 @@ namespace :question do
     end
     
     task :q1 do
-        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_YELLOW_URL'])
+        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_RED_URL'])
         row = ActiveRecord::Base.connection.execute('select distinct EXTRACT(month from fc.creation_date) as month, COUNT(fc."compagnyName") as Number_of_Contacts
                                                     from fact_contacts fc
                                                     group by EXTRACT(month from fc.creation_date)
@@ -19,7 +19,7 @@ namespace :question do
     end
 
     task :q2 do
-        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_YELLOW_URL'])
+        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_RED_URL'])
         row = ActiveRecord::Base.connection.execute('select distinct EXTRACT(month from fq.creation_date) as month, COUNT(fq."compagnyName")
                                                     from fact_quotes fq 
                                                     group by EXTRACT(month from fq.creation_date)
@@ -31,7 +31,7 @@ namespace :question do
     end
 
     task :q3 do
-        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_YELLOW_URL'])
+        ActiveRecord::Base.establish_connection(url: ENV['HEROKU_POSTGRESQL_RED_URL'])
         row = ActiveRecord::Base.connection.execute('select dc.id , dc."nbElevator" 
                                                     from dim_customers dc 
                                                     ')
