@@ -30,4 +30,4 @@ secondbase:
     url: <%= ENV['SECOND_DATABASE_TEST_URL'] %>
   production:
     <<: *postgres
-    url: <%= ENV['HEROKU_POSTGRESQL_RED_URL'] %>
+    url: <%= ENV['HEROKU_POSTGRESQL_WHITE_URL'] %>
