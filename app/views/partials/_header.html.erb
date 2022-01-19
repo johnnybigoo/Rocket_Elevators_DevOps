@@ -81,10 +81,10 @@
 																			<%= link_to "INTERVENTION", new_intervention_path(anchor: "intervention-page") %>
 																			</li>
 																			<li>
-																				<%= link_to "SPEECH PROFILE", speech_path %>
+																				<%= link_to "SPEECH PROFILE", speech_path(anchor: "profile-page") %>
 																			</li>
 																			<li>
-																				<%= link_to "SPEECH TRANSCRIPTION", speech_transcribe_path %>
+																				<%= link_to "SPEECH TRANSCRIPTION", speech_transcribe_path(anchor: "transcribe-page") %>
 																			</li>
 																			<li>
 																					<%= link_to "STATS", pages_charts_path %>
@@ -98,7 +98,7 @@
 																	
                                 <% else %>
 																	<li><!-- SIGN IN -->
-																		<%= link_to "SIGN IN", new_user_session_path %>
+																		<%= link_to "SIGN IN", new_user_session_path(anchor: "login-page") %>
 																	</li>
                                 <% end %>
                             </ul>
